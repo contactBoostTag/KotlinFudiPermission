@@ -12,7 +12,7 @@
 ### by Romell Domínguez
 [![](snapshot/icono.png)](https://www.romellfudi.com/)
 
-`latestVersion` es 1.0.a
+`latestVersion` is [![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-ussd-library.svg)](https://bintray.com/romllz489/maven/kotlin-ussd-library)
 
 Agregar en tu archivo `build.gradle` del proyecto Android:
 
@@ -21,7 +21,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    compile 'com.romellfudi.permission:fudi-permission:${latestVersion}'
+    compile 'com.romellfudi.permission:kotlin-fudi-permission:${latestVersion}'
 
 }
 ```
@@ -66,30 +66,6 @@ STORAGE
     WRITE_EXTERNAL_STORAGE
 ```
 
-## Import library:
-
-En caso usar componentes aar, indicas en el gradle, mediante las las sentencias:
-
-```gradle
-repositories{
-    flatDir {
-        dirs 'libs'
-    }
-}
-```
-
-Agregamos la dependencia en nuestro módulo aplicativo, usar uno obviamente para no tener conflictos:
-
-```gradle
-dependencies {
-//    compile project(':fudi-permission')
-//    compile(name: 'fudi-permission-1.0.a', ext: 'aar')
-//    compile files('libs/fudi-permission-1.0.a.jar')
-    implementation 'com.romellfudi.permission:fudi-permission:1.0.a'
-}
-```
-
-
 ## How use
 
 Agregamos los permisos que se requieran y este en el archivo adjunto de los permisos en nuestro app/manifest.xml:
@@ -101,48 +77,44 @@ Agregamos los permisos que se requieran y este en el archivo adjunto de los perm
 
 Importamos las variables de clases respectivamente para cada permisos:
 
-```java
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static android.Manifest.permission.CAMERA;
+```kotlin
+import android.Manifest.permission.ACCESS_FINE_LOCATION
+import android.Manifest.permission.CAMERA
 ```
 
 Construcción del callback de permisos. En caso el usuario rechace una o más, estas retornarán en el método *onRefuse method* , de lo contrario pasará a *onFinally*
 
-```java
-private PermissionService.Callback callback = new PermissionService.Callback() {
-        @Override
-        public void onRefuse(ArrayList<String> refusePermissions) {
-            // todo
+```kotlin
+val callback = object : PermissionService.Callback() {
+        override fun onRefuse(refusePermissions: ArrayList<String>) {
+            
         }
 
-        @Override
-        public void onFinally() {
-            // todo
+        override fun onFinally() {
+        
         }
-    };
+    }
 ```
 
 Invocamos nuestro servicio, pasando los permisos y el objeto callback:
 
-```java
-new PermissionService(this).request(
-                new String[]{ACCESS_FINE_LOCATION, CAMERA},
-                callback);
+```kotlin
+PermissionService(activity).request(
+                arrayOf(ACCESS_FINE_LOCATION, CAMERA), callback)
 ```
 
 **Recordar** sobreescribir el método onRequestPermissions:
 
-```java
-@Override
-public void onRequestPermissionsResult(int requestCode, 
-            @NonNull String[] permissions, @NonNull int[] grantResults) {
-            callback.handler(permissions, grantResults);
+```kotlin
+override fun onRequestPermissionsResult(requestCode: Int,
+            permissions: Array<String>, grantResults: IntArray) {
+        PermissionService.handler(callback, grantResults, permissions)
     }
 ```
 
 ### License
 ```
-Copyright 2018 Romell D.Z.
+Copyright 2019 Romell D.Z.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
