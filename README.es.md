@@ -2,17 +2,17 @@
 
 [![Platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=23)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/romellfudi/FudiPermission/blob/master/LICENSE)
-[![Bintray](https://img.shields.io/bintray/v/romllz489/maven/fudi-annotation.svg)](https://bintray.com/romllz489/maven/fudi-permission)
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Fudi%20Permisions-green.svg?style=flat )]( https://android-arsenal.com/details/1/7105 )
-[![Jitpack](https://jitpack.io/v/romellfudi/FudiPermission.svg)](https://jitpack.io/#romellfudi/FudiPermission)
-[![CircleCi](https://img.shields.io/circleci/project/github/romellfudi/FudiPermission.svg)](https://circleci.com/gh/romellfudi/FudiPermission/tree/master)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/romellfudi/KotlinFudiPermission/blob/master/LICENSE)
+[![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-fudi-annotation.svg)](https://bintray.com/romllz489/maven/kotlin-fudi-permission) 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Kotlin%20Fudi%20Permisions-green.svg?style=flat )]( https://android-arsenal.com/details/1/7105 )
+[![Jitpack](https://jitpack.io/v/romellfudi/KotlinFudiPermission.svg)](https://jitpack.io/#romellfudi/KotlinFudiPermission)
+[![CircleCi](https://img.shields.io/circleci/project/github/romellfudi/KotlinFudiPermission.svg)](https://circleci.com/gh/romellfudi/KotlinFudiPermission/tree/master)
 [![](https://img.shields.io/badge/language-EN-blue.svg)](./)
 
 ### by Romell Domínguez
 [![](snapshot/icono.png)](https://www.romellfudi.com/)
 
-`latestVersion` is [![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-ussd-library.svg)](https://bintray.com/romllz489/maven/kotlin-ussd-library)
+`latestVersion` is [![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-fudi-permission.svg)](https://bintray.com/romllz489/maven/kotlin-fudi-permission)
 
 Agregar en tu archivo `build.gradle` del proyecto Android:
 

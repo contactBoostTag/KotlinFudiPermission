@@ -12,7 +12,7 @@
 ### by Romell Domínguez
 [![](snapshot/icono.png)](https://www.romellfudi.com/)
 
-`latestVersion` is [![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-ussd-library.svg)](https://bintray.com/romllz489/maven/kotlin-ussd-library)
+`latestVersion` is [![Bintray](https://img.shields.io/bintray/v/romllz489/maven/kotlin-fudi-permission.svg)](https://bintray.com/romllz489/maven/kotlin-fudi-permission)
 
 Add the following in your app's `build.gradle` file:
 
