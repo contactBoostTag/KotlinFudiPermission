@@ -22,7 +22,6 @@ repositories {
 }
 dependencies {
     compile 'com.romellfudi.permission:kotlin-fudi-permission:${latestVersion}'
-
 }
 ```
 
